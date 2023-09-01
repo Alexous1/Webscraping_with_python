@@ -67,9 +67,9 @@ if response.ok:
         links = []
         # get the html code of the page
         soup = BeautifulSoup(response.text, features="html.parser")
-        # get a certain balise "table" with a selector css
+        # get a certain balise "div" with a selector css
         table = soup.find('div', attrs= {'id' : "mw-customcollapsible-current"})
-        # get all of the span in the table
+        # get all of the span in the div
         title = table.findAll('span')
 
         # retrieve the span text for each span
